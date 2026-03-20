@@ -196,6 +196,15 @@ If the user chooses "Продолжить все задачи", keep executing s
 
 If the user chooses "Продолжить 1 задачу", execute the next subtask and then show the same selector again.
 
+## Step 10: Deploy Offer
+
+After completing work (plan fully done, or user chose to stop), if there are uncommitted or unpushed changes, offer to deploy using `AskUserQuestion`:
+
+- **"Задеплоить"** — `git commit` + `git push` (triggers production deploy)
+- **"Пока не надо"** — leave changes locally
+
+IMPORTANT: Always use `AskUserQuestion` for this (interactive selector with arrow keys), never plain text numbered list. This applies to ALL skills and tasks that produce deployable changes.
+
 ## CRITICAL RULES
 
 - Execute ONE subtask at a time (all its steps), then stop and report
