@@ -11,15 +11,13 @@
 
 ## Установка
 
-### 1. Создать команду в проекте
+Скопировать команду глобально (доступна во всех проектах):
 
 ```bash
-mkdir -p <project>/.claude/commands
+cp "docs skill/commands/docs.md" ~/.claude/commands/docs.md
 ```
 
-Скопировать `commands/docs.md` в `<project>/.claude/commands/docs.md`.
-
-### 2. Использование
+## Использование
 
 ```
 /docs              # Полный цикл: анализ + реорганизация + верификация

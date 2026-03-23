@@ -64,18 +64,27 @@
 
 ### 🔧 Установка для Claude Code
 
+Все команды устанавливаются **глобально** в `~/.claude/commands/` — так они доступны во всех проектах.
+
 **1. Journal Skill:**
-- В корне вашего проекта создайте директорию для команд: `mkdir -p .claude/commands`
-- Создайте файл `.claude/commands/journal.md` и скопируйте в него текст промпта для Journal.
-- Создайте папку для хранения отчётов: `mkdir -p journal` (её можно добавить в `.gitignore`, если вы не хотите хранить историю в репозитории).
+```bash
+cp "journal skill/commands/journal.md" ~/.claude/commands/journal.md
+```
+В каждом проекте создайте папку для отчётов: `mkdir -p journal` (можно добавить в `.gitignore`).
 
 **2. Deep Planning Skill:**
-- Основные файлы команд (например, `deep-plan.md`, `dp-next.md`, `dp-status.md`) поместите в папку `.claude/commands/`.
-- *Интеграция с Journal:* В файле `dp-next.md` (в шаге "Save to History") измените путь сохранения отчётов с `deep-planning-skill/history/YYYY-MM-DD/` на `journal/YYYY-MM-DD/`.
+```bash
+cp "deep plan skill/commands/deep-plan.md" ~/.claude/commands/deep-plan.md
+cp "deep plan skill/commands/dp-next.md" ~/.claude/commands/dp-next.md
+cp "deep plan skill/commands/dp-status.md" ~/.claude/commands/dp-status.md
+```
+*Интеграция с Journal:* В файле `dp-next.md` (в шаге "Save to History") измените путь сохранения отчётов с `deep-planning-skill/history/YYYY-MM-DD/` на `journal/YYYY-MM-DD/`.
 
 **3. Docs Skill:**
-- Скопируйте файл `docs skill/commands/docs.md` в `.claude/commands/docs.md` вашего проекта.
-- Запустите `/docs` — скилл автоматически разберёт CLAUDE.md на ядро + файлы в `docs/`.
+```bash
+cp "docs skill/commands/docs.md" ~/.claude/commands/docs.md
+```
+Запустите `/docs` в любом проекте — скилл автоматически разберёт CLAUDE.md на ядро + файлы в `docs/`.
 
 ---
 
