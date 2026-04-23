@@ -12,9 +12,8 @@
 - Мониторинг прогресса через `dp-status`
 - Завершение с отчётом в `journal/YYYY-MM-DD/`
 
-## Где лежит исходник Claude
+## Файлы скилла
 
-- Папка: `/Users/ilgiz/Documents/code/ skills/deep plan skill`
 - Основные файлы: `commands/deep-plan.md`, `commands/dp-next.md`, `commands/dp-status.md`
 
 ## Codex version
@@ -22,7 +21,7 @@
 Для Codex этот workflow теперь является дефолтным skill:
 
 - Skill name: `deep-planning`
-- Установлен в: `/Users/ilgiz/.codex/skills/deep-planning`
+- Установлен в: `~/.codex/skills/deep-planning`
 - Хранение планов: `deep-planning-skill/<plan-id>/`
 - `doc/plans` больше не используется этим skill
 
